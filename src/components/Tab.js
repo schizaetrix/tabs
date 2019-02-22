@@ -3,13 +3,13 @@ import React from 'react'
 
 const Tab = (props) => {
     return (
-        <a 
+        <button 
             onClick={props.onClick}
             className={props.tabState}
             data-tab={props.dataTab}
         >
             {props.label}
-        </a>
+        </button>
     )
 }
 
