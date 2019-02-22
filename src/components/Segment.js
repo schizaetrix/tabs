@@ -1,29 +1,7 @@
 import React from 'react'
 import Content from './Content'
+import { segmentContent } from './segmentContent'
 
-
-const segmentContent = {
-    segmentOne: {
-        title: "Hello React!",
-        content: () => {
-            return (
-                <div>
-                    <p>
-                        React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
-                    </p>
-                    <p>Declarative views make your code more predictable and easier to debug</p>
-                </div>
-            )
-        }
-    },
-    segmentTwo: {
-        title: "Number of ",
-        content: "Lorem Ipsum content"
-    },
-    segmentThree: {
-        content: "Login Screen content"
-    }
-}
 
 class Segment extends React.Component {
     constructor (props) {
@@ -50,7 +28,7 @@ class Segment extends React.Component {
                     segmentState={this.state.segmentOneState}
                     dataTab="first"
                     title={segmentContent.segmentOne.title}
-                    content={segmentContent.segmentOne.content()}
+                    content={segmentContent.segmentOne.content}
                 />
                 <Content 
                     segmentState={this.state.segmentTwoState}
@@ -61,6 +39,7 @@ class Segment extends React.Component {
                 <Content 
                     segmentState={this.state.segmentThreeState}
                     dataTab="third"
+                    title={segmentContent.segmentThree.title}
                     content={segmentContent.segmentThree.content}
                 />
             </div>

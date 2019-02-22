@@ -7,9 +7,9 @@ const Content = (props) => {
             className={props.segmentState}
             data-tab={props.dataTab}
         >
-            <h1>
+            <h2>
                 {props.title}
-            </h1>
+            </h2>
                 {props.content}
         </div>
     )
