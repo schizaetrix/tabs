@@ -14,8 +14,10 @@ class TabMenu extends React.Component {
             segmentThreeState: false
         }
     }
-    componentDidUpdate () {
-        this.props.callbackFromApp(this.state)
+    componentDidUpdate (prevProps, prevState) {
+        if (prevState !== this.state) {
+            this.props.callbackFromApp(this.state)
+        }
     }
     clickTabOne = () => {
         this.setState({

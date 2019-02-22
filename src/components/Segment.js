@@ -34,6 +34,15 @@ class Segment extends React.Component {
             segmentThreeState: this.props.dataFromTab.segmentThreeState
         }
     }
+    componentDidUpdate (prevProps, prevState) {
+        if (prevProps !== this.props) {
+            this.setState({
+                segmentOneState: this.props.dataFromTab.segmentOneState,
+                segmentTwoState: this.props.dataFromTab.segmentTwoState,
+                segmentThreeState: this.props.dataFromTab.segmentThreeState
+            })
+        }
+    }
     render () {
         return (
             <div>

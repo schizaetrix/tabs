@@ -5,7 +5,7 @@ const Content = (props) => {
     return (
         <div
             className={props.segmentState}
-            data-tab={props.datatab}
+            data-tab={props.dataTab}
         >
             <h1>
                 {props.title}
